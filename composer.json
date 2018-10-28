@@ -1,0 +1,26 @@
+{
+  "name": "linkorb/stylex",
+  "description": "Toolkit for managing style-guides, policies and rule-books",
+  "homepage": "https://github.com/linkorb/stylex",
+  "keywords": ["context", "linkorb"],
+  "type": "library",
+  "authors": [
+    {
+      "name": "LinkORB Engineering",
+      "email": "engineering@linkorb.com",
+      "role": "Development"
+    }
+  ],
+  "require": {
+    "symfony/yaml": "^4.0",
+    "symfony/console": "^4.0",
+    "zordius/lightncandy": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Stylex\\": "src/"
+    }
+  },
+  "bin": ["bin/stylex"],
+  "license": "MIT"
+}

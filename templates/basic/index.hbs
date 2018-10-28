@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>{{name}}</title>
+  </head>
+  <body>
+
+    {{#*inline "examplePartial"}}
+    ![image-{{id}}]({{ imageUrl }})
+
+    {{ text }}
+
+    Reason: {{ reason }}
+
+    {{/inline}}
+
+    <h1>{{name}}</h1>
+
+    <p class="lead">{{ description }}</p>
+
+    <h2>Introduction</h2>
+
+    <h3>Authors</h3>
+
+    <ul>
+    {{#each authors}}
+        <li>{{name}} ({{website}}, {{email}})</li>
+    {{/each}}
+    </ul>
+
+    <h3>Table of contents</h3>
+
+    <ul>
+    {{#each categories}}
+        <li><a href="#{{id}}">{{name}}</a></li>
+    {{/each}}
+    </ul>
+
+    <h2>Categories</h2>
+
+    {{#each categories}}
+    <h3>[{{name}}](#{{id}})</h3>
+
+    {{#each rules}}
+    <h4>[{{name}}](#{{id}})</h4>
+
+    <p>{{ description }}</p>
+
+    {{#if good}}
+    <h5>Good</h5>
+
+    {{#each good}}
+    {{>examplePartial}}
+    {{/each}}
+    {{/if}}
+
+    {{#if bad}}
+    <h5>Bad</h5>
+
+    {{#each bad}}
+    {{>examplePartial}}
+    {{/each}}
+    {{/if}}
+
+
+    {{#if exceptions}}
+    <h5>Exceptions</h5>
+
+    {{#each exceptions}}
+    {{>examplePartial}}
+    {{/each}}
+    {{/if}}
+
+    {{/each}}
+
+    {{/each}}
+
+  </body>
+</html>

@@ -1,0 +1,67 @@
+{{#*inline "examplePartial"}}
+![image-{{id}}]({{ imageUrl }})
+
+{{ text }}
+
+Reason: {{ reason }}
+
+{{/inline}}
+
+# {{name}}
+
+{{ description }}
+
+## Introduction
+
+### Authors
+
+{{#each authors}}
+* {{name}} ({{website}}, {{email}})
+{{/each}}
+
+### Table of contents
+
+{{#each categories}}
+* [{{name}}](#{{id}})
+{{/each}}
+
+## Categories
+
+{{#each categories}}
+### [{{name}}](#{{id}})
+
+{{#each rules}}
+#### [{{name}}](#{{id}})
+
+{{ description }}
+
+{{#if good}}
+##### Good:
+
+{{#each good}}
+{{>examplePartial}}
+{{/each}}
+{{/if}}
+
+{{#if bad}}
+##### Bad:
+
+{{#each bad}}
+{{>examplePartial}}
+{{/each}}
+{{/if}}
+
+
+{{#if exceptions}}
+##### Exceptions:
+
+{{#each exceptions}}
+{{>examplePartial}}
+{{/each}}
+{{/if}}
+
+{{/each}}
+
+{{/each}}
+
+The end...

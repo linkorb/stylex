@@ -1,0 +1,31 @@
+---
+type: rule
+category: $color
+
+name: Use Red instead of Blue
+description: When given the choice between red and blue, always choose red.
+
+resources:
+  -
+    text: Wikipedia page
+    url: https://en.wikipedia.org/wiki/Red_vs._Blue
+  -
+    text: Rooster teeth info about red vs blue
+    url: https://roosterteeth.com/series/red-vs-blue
+  
+bad:
+  ~lets_use_blue:
+    imageUrl: https://image.shutterstock.com/image-vector/business-buzzword-lets-blue-sky-450w-609898253.jpg
+    text: "Hey, let's blue sky this"
+    reason: Blue is not Red
+
+good:
+  ~lets_use_red:
+    imageUrl: https://static.webshopapp.com/shops/011671/files/132256184/345x345x2/stick-lets-zeester-rood-stick-let.jpg
+    text: "Hey, let's go buy a Red spinner!"
+    reason: Red stuff is always good
+
+exceptions:
+  ~no-red:
+    text: When there is no red option available, it's ok to use blue.
+  

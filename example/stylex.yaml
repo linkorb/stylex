@@ -1,0 +1,16 @@
+---
+id: guide
+type: guide
+
+name: The example style-guide
+
+description: This is the example styleguide.
+authors:
+  ~joe:
+    name: Joe Johnson
+    website: https://www.example.com
+    email: joe@example.com
+  ~alice:
+    name: Alice Alisson
+    website: https://www.example.com
+    email: alice@example.com
